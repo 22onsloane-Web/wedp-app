@@ -1,12 +1,12 @@
 <?php
-// $host = "localhost"; // Change as needed
-// $username = "root"; // Change as needed
-// $password = ""; // Change as needed
-// $database = "wedp";
-$host = "dedi332.cpt3.host-h.net"; // Change as needed
-$username = "tdmaputmxp_2"; // Change as needed
-$password = "D4znU3QrMnTnYsWcnRS8"; // Change as needed
-$database = "tdmaputmxp_db2";
+$host = "dedi332.cpt3.host-h.net";
+$username = "tdmaputmxp_1";
+$password = "f8jTTYJVAFi96AWaGvB8";
+$database = "tdmaputmxp_db1";
+// $host = "dedi332.cpt3.host-h.net"; // Change as needed
+// $username = "tdmaputmxp_2"; // Change as needed
+// $password = "D4znU3QrMnTnYsWcnRS8"; // Change as needed
+// $database = "tdmaputmxp_db2";
 
 $conn = new mysqli($host, $username, $password, $database);
 if ($conn->connect_error) {
