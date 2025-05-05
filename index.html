@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCBP Programme Registration</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .valid-feedback {
+            display: none;
+        }
+        .invalid-feedback {
+            display: none;
+        }
+
+        .btn-custom {
+            background-color: #fe5c01;
+            color: white;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #f77f3b; /* Darker shade for hover effect */
+            color: white;
+        }
+
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-lg">
+                    <div style="background-color: #fe5c01;" class="card-header text-white text-center">
+                        <h3>Application Form</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="fileErrorAlert" class="alert alert-danger d-none"></div>
+                        <form action="register.php" method="POST" enctype="multipart/form-data">
+
+                            <div class="card text-bg-dark">
+                                <img src="https://www.22onsloane.co/wp-content/uploads/2025/03/Microsoft-Programmes-Social-Media-Recovered-01-1-scaled.jpg" class="card-img" alt="...">
+                              </div>
+
+                              <h2>Personal Information</h2>
+                              <p class="fs-6 fst-italic">N.B.: All fields are required.</p>
+  
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name & Surname</label>
+                                    <input type="text" class="form-control" name="name" placeholder="Enter your name & surname" required>
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">Name must be at least 3 characters.</div>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label for="contactnumber" class="form-label">Contact number</label>
+                                    <input type="number" class="form-control" name="contactnumber" required>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label for="idnumber" class="form-label">ID number</label>
+                                    <input type="text" class="form-control" name="idnumber" required>
+                                </div>
+    
+    
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                                    <div class="valid-feedback">Email is available!</div>
+                                    <div class="invalid-feedback">Email already exists or is invalid.</div>
+                                </div>
+    
+                                <div class="mb-3">
+                                <label>Gender</label>
+                                <select class="form-select" name="gender">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label>Race</label>
+                                    <select class="form-select" name="race">
+                                        <option value="Black">Black</option>
+                                        <option value="White">White</option>
+                                        <option value="Indian">Indian</option>
+                                        <option value="Coloured">Coloured</option>
+                                        <option value="Asian">Asian</option>
+                                    </select>
+                                </div>
+        
+                                <div class="mb-1">
+                                    <label">Disability</label>
+                                    <select class="form-select" name="disability">
+                                      <option value="no">No</option>
+                                      <option value="yes">Yes</option>
+                                    </select>
+                                </div>
+                                    
+    
+                                <div class="mb-3">
+                                    <label for="type_disabilty" class="form-label"></label>
+                                    <input type="text" class="form-control" name="type_disability" placeholder="If yes, please specify.">
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label for="province" class="form-label">Province</label>
+                                    <select name="province" class="form-select" required>
+                                        <option value="">Select Province</option>
+                                        <option value="Gauteng">Gauteng</option>
+                                        <option value="Western Cape">Western Cape</option>
+                                        <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+                                        <option value="Eastern Cape">Eastern Cape</option>
+                                        <option value="Northern Cape">Northern Cape</option>
+                                        <option value="Free State">Free State</option>
+                                        <option value="Limpopo">Limpopo</option>
+                                        <option value="Mpumalanga">Mpumalanga</option>
+                                        <option value="North West">North West</option>
+                                        <option value="Not applicable">Not applicable</option>
+                                    </select>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" class="form-control" name="city" placeholder="Enter city name" required>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label>Qualifications and certifications of business owner/s:</label>
+                                        <textarea  class="form-control" placeholder="List your qualifications and certifications of business owner/s" name="qualifications_owner" required></textarea>                              
+                                    </div>
+                                
+    
+                                <h2>Business Information</h2>
+    
+                                <div class="mb-3">
+                                <label>Business Name: </label><input type="text"  class="form-control" name="business_name" required>
+                                </div>
+    
+                                <div class="mb-3">
+                                <label>Business Registration Number:</label> <input type="text"  class="form-control" name="registration_number" required>
+                                </div>
+    
+                                <div class="mb-3">
+                                <label>Business Address:</label>
+                                <input type="text"  class="form-control" name="business_address" required>
+                                </div>
+                                
+                                <label>What stage is your business?</label>
+                                <select name="business_stage" class="form-select">
+                                    <option value="Early Stage">Early Stage</option>
+                                    <option value="Growth">Growth</option>
+                                    <option value="Scaling and Expansion">Scaling and Expansion</option>
+                                    <option value="Maturity">Maturity</option>
+                                </select><br>
+                                
+                                <div class="mb-3">
+                                  <label for="sector" class="form-label">Sector</label>
+                                  <select name="sector" class="form-select" required>
+                                      <option value="">Select Sector</option>
+                                      <option value="Finance, Real Estate, and Business Services">Finance, Real Estate, and Business Services</option>
+                                      <option value="General Government Services">General Government Services</option>
+                                      <option value="Wholesale, Retail, and Motor Trade">Wholesale, Retail, and Motor Trade</option>
+                                      <option value="Catering and Accommodation">Catering and Accommodation</option>
+                                      <option value="Manufacturing">Manufacturing</option>
+                                      <option value="Mining">Mining</option>
+                                      <option value="Agriculture">Agriculture</option>
+                                      <option value="Communications">Communications</option>
+                                      <option value="Tourism">Tourism</option>
+                                      <option value="Others">Other</option>
+                                  </select>
+                              </div>
+    
+                                <div class="mb-3">
+                                    <label for="industry" class="form-label">Industry</label>
+                                    <input type="text" class="form-control" name="industry" required>
+                                </div>
+    
+                                <div class="mb-3">
+                                <label for="business_compliance" class="form-label">Is the business compliant with sector regulations/standards? (elaborate)</label>
+                                    <textarea  class="form-control" name="business_compliance" required></textarea>
+                                </div>
+                                
+                                <div class="mb-3">
+                                <label for="business_offering" class="form-label">Business Offering & Value Proposition:</label>
+                                <textarea class="form-control" name="business_offering" required></textarea>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label for="business_duration" class="form-label">How long has the business been operating?</label>
+                                    <input type="number" class="form-control"  name="business_duration" min="0" max="100" required>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label for="annual_turnover" class="form-label">How much was your annual turnover in the last financial year?</label>
+                                    <input type="number" class="form-control"  name="annual_turnover" min="1" max="1000000000" required>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label for="monthly_turnover" class="form-label">How much is your monthly turnover?</label>
+                                    <input type="number"  class="form-control"  name="monthly_turnover" min="1" max="100000000" required>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label for="employees" class="form-label">Number of Employees: </label>
+                                    <input type="number" class="form-control" name="employees" min="0" max="100000" required>
+                                </div>
+    
+                                <div class="mb-3">
+                                <label for="leadership_structure" class="form-label">Outline business leadership structure and their qualifications</label>
+                                    <textarea class="form-control" placeholder="Enter required information here" name="leadership_structure" required></textarea>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label for="tax_compliance" class="form-label">Is the business tax compliant?</label>
+                                    <textarea class="form-control" placeholder="E.g. We are VAT, PAYE and Income Tax compliant" name="tax_compliance" required></textarea>
+                                </div>
+                                    
+                                <h2 class="py-3">Market and Competition</h2>
+    
+            
+                                <div class="mb-3">
+                                <label for="target_market" class="form-label">Who are your target customers and how big is the market?</label>
+                                    <textarea  class="form-control" placeholder="Enter required information here" name="target_market" required></textarea>
+                                </div>
+                                
+                                <label>Do you have documentation to support the answer above?</label>
+                                <select class="form-select" name="market_documentation">
+                                    <option value="market_documentationyes">Yes</option>
+                                    <option value="market_documentationno">No</option>
+                                </select>
+                                
+                                <div class="mb-3">
+                                <label for="competitors" class="form-label">Who are your main competitors?</label>
+                                    <textarea class="form-control" placeholder="Enter required information here"  name="competitors" required></textarea>
+                                </div>
+    
+                                <label>Is there a competitor analysis report in place?</label>
+                                <select class="form-select" name="competitor_analysis">
+                                    <option value="competitor_analysisyes">Yes</option>
+                                    <option value="competitor_analysisno">No</option>
+                                </select><br>
+                                
+                                <div class="mb-3">
+                                <label for="product_uniqueness" class="form-label">How unique or innovative is your service or product compared to competitors?</label>
+                                    <textarea  class="form-control" placeholder="Enter required information here" name="product_uniqueness" required></textarea>
+                                
+                                </div>
+                                
+                                <div class="mb-3">
+                                <label for="business_strengths" class="form-label">What is your strength as a business?</label>
+                                    <textarea  class="form-control" placeholder="Enter required information here" name="business_strengths" required></textarea>
+                                
+                                </div>
+                                
+                                <div class="mb-3">
+                                <label>Which areas require improvement to grow the business?</label>
+                                    <textarea class="form-control" placeholder="Enter required information here" name="areas_for_improvement" required></textarea>   
+                                </div>
+    
+                                <label>Do you have a marketing, communication plan or go-to-market strategy?</label>
+                                <select  class="form-select" name="marketing_strategy">
+                                    <option value="marketing_strategyyes">Yes</option>
+                                    <option value="marketing_strategyno">No</option>
+                                </select><br>
+    
+    
+                                <h2 class="py-3">Operations Efficiency</h2>
+                                
+                                <label>Where do you operate from?</label>
+                                <select class="form-select" name="operation_location">
+                                    <option value="Office Park">Office Park</option>
+                                    <option value="Home">Home</option>
+                                    <option value="Workshop">Workshop</option>
+                                    <option value="Industrial Park">Industrial Park</option>
+                                    <option value="Other">Other</option>
+                                </select><br>
+    
+                                <div class="mb-3">
+                                    <label for="efficiency_rating" class="form-label">Rate your operational efficiency (1-5):</label>
+                                    <input class="form-control" type="number" name="efficiency_rating" min="1" max="5" required></label>
+                                </div>
+                                
+                                <label>Do you have Standard Operating Procedures (SOP) in place?</label>
+                                <select class="form-select" name="sop">
+                                    <option value="sopyes">Yes</option>
+                                    <option value="sopno">No</option>
+                                </select><br>
+                                
+                                <div class="mb-3">
+                                <label for="operations_process" class="form-label">Are your operational processes automated or manual?</label>
+                                    <textarea  class="form-control" name="operations_process" required></textarea>
+                                </div>
+    
+                                <h2>Documents to be Attached</h2>
+                                <p class="fs-6 fst-italic"><span><strong>Max file size 5mb</strong></span> - Kindly upload files in jpg, jpeg, png, gif or pdf formats only. N.B.: Spreadsheet files are not permitted.</p>
+                                
+    
+                                <div class="mb-3">
+                                    <label for="file" class="form-label">Business Registration Certificate (CIPC):</label>
+                                    <input type="file"  class="form-control" name='registration_doc' required>
+                                    <div class="invalid-feedback">Please upload a valid file (jpg, jpeg, png, gif, pdf).</div>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label for="file" class="form-label">Directors’ ID Copy/s:</label>
+                                    <input type="file"  class="form-control"  name='id_doc'  required>
+                                    <div class="invalid-feedback">Please upload a valid file (jpg, jpeg, png, gif, pdf).</div>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label for="file" class="form-label">BBBEE Certificate/Affidavit: </label>
+                                    <input type="file"  class="form-control"  name='bbbee_doc'  required>
+                                    <div class="invalid-feedback">Please upload a valid file (jpg, jpeg, png, gif, pdf).</div>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label for="file" class="form-label">Tax Clearance Pin: </label>
+                                    <input type="file"  class="form-control" name='tax_clearance_doc'  required>
+                                    <div class="invalid-feedback">Please upload a valid file (jpg, jpeg, png, gif, pdf).</div>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label for="file" class="form-label">Business Profile: </label>
+                                    <input type="file"  class="form-control" name='company_profile_doc'  required>
+                                    <div class="invalid-feedback">Please upload a valid file (jpg, jpeg, png, gif, pdf).</div>
+                                </div>
+  
+    
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-custom">Apply</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mt-3 text-center">
+                        <span id="responseMessage" class="text-success"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+        <!-- <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              const allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'pdf'];
+              const maxSize = 5 * 1024 * 1024; // 50MB in bytes
+          
+              const filesToValidate = [
+                  { id: 'file1', required: true },
+                  { id: 'file2', required: true },
+                  { id: 'file3', required: true },
+                  { id: 'file4', required: true },
+                  { id: 'file5', required: true }
+              ];
+          
+              function validateFile(inputElement, required) {
+                  const file = inputElement.files[0];
+                  const feedbackElement = inputElement.nextElementSibling;
+          
+                  if (file) {
+                      const fileExtension = file.name.split('.').pop().toLowerCase();
+                      if (!allowedExtensions.includes(fileExtension)) {
+                          inputElement.classList.add('is-invalid');
+                          feedbackElement.textContent = 'Invalid file type. Allowed: jpg, jpeg, png, gif, pdf.';
+                          feedbackElement.style.display = 'block';
+                          return false;
+          
+                      } else if (file.size > maxSize) {
+                              inputElement.classList.add('is-invalid');
+                              feedbackElement.textContent = 'File size must not exceed 5MB.';
+                              feedbackElement.style.display = 'block';
+                              return false;
+                          } else {
+                      inputElement.classList.remove('is-invalid');
+                      feedbackElement.style.display = 'none';
+                      return true;
+                  }
+          
+                  } else if (required) {
+                      inputElement.classList.add('is-invalid');
+                      feedbackElement.textContent = 'This file is required.';
+                      feedbackElement.style.display = 'block';
+                      return false;
+                  } else {
+                      inputElement.classList.remove('is-invalid');
+                      feedbackElement.style.display = 'none';
+                      return true;
+                  }
+              }
+          
+              filesToValidate.forEach(file => {
+                  const inputElement = document.getElementById(file.id);
+                  inputElement.addEventListener('change', () => validateFile(inputElement, file.required));
+              });
+          
+              document.getElementById('applicationForm').addEventListener('submit', function(e) {
+                  let formValid = true;
+          
+                  filesToValidate.forEach(file => {
+                      const inputElement = document.getElementById(file.id);
+                      if (!validateFile(inputElement, file.required)) {
+                          formValid = false;
+                      }
+                  });
+          
+                  if (!formValid) {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      alert('Please correct the errors in the form before submitting.');
+                  }
+              });
+          
+          });
+          </script> -->
+  
+    
+    </body>
+  </html>
+  
