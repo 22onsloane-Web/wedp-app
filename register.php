@@ -1,8 +1,12 @@
 <?php
-$host = "localhost"; // Change as needed
-$username = "root"; // Change as needed
-$password = ""; // Change as needed
-$database = "wedp";
+// $host = "localhost"; // Change as needed
+// $username = "root"; // Change as needed
+// $password = ""; // Change as needed
+// $database = "wedp";
+$host = "dedi332.cpt3.host-h.net"; // Change as needed
+$username = "tdmaputmxp_2"; // Change as needed
+$password = "D4znU3QrMnTnYsWcnRS8"; // Change as needed
+$database = "tdmaputmxp_db2";
 
 $conn = new mysqli($host, $username, $password, $database);
 if ($conn->connect_error) {
@@ -55,7 +59,7 @@ if ($conn->connect_error) {
         // Check if a file was uploaded without errors
 
         $target_dir = "uploads/";
-        $base_url = "https://tdmap2025.22onsloane.co/uploads/"; // Full base URL for downloads
+        $base_url = "https://tdmap2025.22onsloane.co/uploads_wedp/"; // Full base URL for downloads
         $allowed_types = array("jpg", "jpeg", "png", "gif", "pdf", "doc", "docx", "xls", "xlsx", "csv", "mp4", "mp3", "zip", "ppt", "pptx");
         
     
