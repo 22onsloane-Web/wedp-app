@@ -8,7 +8,7 @@ SET time_zone = "+00:00";
 
 
 CREATE TABLE attendees (
-  id int(11) ,
+  id INT AUTO_INCREMENT PRIMARY KEY,
   name varchar(255) ,
   contactnumber varchar(255) ,
   idnumber varchar(255) ,

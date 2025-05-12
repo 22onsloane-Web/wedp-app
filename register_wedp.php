@@ -58,7 +58,7 @@ if ($conn->connect_error) {
         $operations_process = htmlspecialchars($_POST['operations_process']);
         // Check if a file was uploaded without errors
 
-        $target_dir = "uploads/";
+        $target_dir = "uploads_wedp/";
         $base_url = "https://tdmap2025.22onsloane.co/uploads_wedp/"; // Full base URL for downloads
         $allowed_types = array("jpg", "jpeg", "png", "gif", "pdf", "doc", "docx", "xls", "xlsx", "csv", "mp4", "mp3", "zip", "ppt", "pptx");
         
@@ -107,6 +107,10 @@ if ($conn->connect_error) {
 
 
        // Insert the file information into the database
+       // Hi leahle, I hope you are good.
+      //Please find the link to the first draft recording of your website. I'm also sharing with different hosting packages offered by Afrihost for hosting your website.
+        // https://www.afrihost.com/website-hosting/
+        // but I am happpy to finalise evrything this Friday if you are available you can come through to the office or we can do a online meeting.
 
       
             $sql = "INSERT INTO attendees (name, contactnumber, idnumber, email, gender, race, disability, type_disability, province, city, qualifications_owner, business_name, registration_number, business_address, business_stage, sector, industry, business_compliance, business_offering, business_duration, annual_turnover, monthly_turnover, employees, leadership_structure, tax_compliance, target_market, market_documentation, competitors, competitor_analysis, product_uniqueness, business_strengths, areas_for_improvement, marketing_strategy, operation_location, efficiency_rating, sop, operations_process,  id_doc_url, tax_clearance_url, registration_doc_url, bbbee_doc_url, company_profile_url) 
